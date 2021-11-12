@@ -35,17 +35,20 @@ $ git push -u origin main
 
 ## Q4:
 
-Edit the file in Q3 by including "gender" variable.\
-**Note: I editted only .py file, not .ipynb file**\
+**Note: I editted only .py file, not .ipynb file**
+
+Edit the file in Q3 by including "gender" variable.
 
 Commit history on branch PS4: https://github.com/lihsuanLin1999/stats507/commit/8ad517db2533c60ea7cbd97195f492345b45dfca
 
 **Git command**: 
 
-$ git checkout PS4\
-Edit .py file by including "gender" variable\
-$ git add .
-$ git commit -m "Edit file and includ e gender"
+$ git checkout PS4
+
+Edit .py file by including "gender" variable
+
+$ git add .\
+$ git commit -m "Edit file and includ e gender"\
 $ git push -u origin
 
 
