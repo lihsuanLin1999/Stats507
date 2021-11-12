@@ -8,16 +8,21 @@
 
 Extracted code snippet
 
-### Q2:
+## Q2:
 
 I first extracted the code snippted of HW2 Q3 and make it into a standalone script file and notebook(ipynb) file and add it to the local repo
 
+### Files:
+-  Stats507_Hw2.ipynb
+-  stats507_HW2_Q3.ipynb
+-  stats507_HW2_Q3.py
+-  Data files from nhanes
 
-### Q3:
-
-**Git command**: 
+## Q3:
 
 git commit history link: https://github.com/lihsuanLin1999/stats507/commit/abe14bda6d16fb42aba622ecfbe38bf8be6d2a51
+
+**Git command**: 
 
 $ git init\
 $ git status\
@@ -32,8 +37,3 @@ $ git push -u origin main
 
 
 
-### Files:
--  Stats507_Hw2.ipynb
--  stats507_HW2_Q3.ipynb
--  stats507_HW2_Q3.py
--  Data files from nhanes
