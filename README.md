@@ -51,6 +51,19 @@ $ git add .\
 $ git commit -m "Edit file and includ e gender"\
 $ git push -u origin
 
+## Q5:
+
+Merge the PS4 branch into the "main" branch.
+
+Commit history: https://github.com/lihsuanLin1999/stats507/commit/b75e55e29d815404753103741c33e6bbbdf023d5
+
+**Git command**: 
+
+$ git checkout main\
+$ git pull origin main\
+$ git merge PS4\
+$ git push origin main
+
 
   
  
