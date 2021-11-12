@@ -9,14 +9,14 @@
 I first extracted the code snippted of HW2 Q3 and make it into a standalone script file and notebook(ipynb) file and add it to the local repo
 
 **Git command**: 
-$ git init
-$ git status
-$ git branch -m master main
-$ git add .
-$ git commit -m "Initial commit. add files"
-$ git remote add origin https://github.com/lihsuanLin1999/stats507
-$ git remote set-url origin https://<githubtoken>@github.com/lihsuanLin1999/stats507.git
-$ git push -u origin main
+$ git init\
+$ git status\
+$ git branch -m master main\
+$ git add .\
+$ git commit -m "Initial commit. add files"\
+$ git remote add origin `https://github.com/lihsuanLin1999/stats507`\
+$ git remote set-url origin https://<githubtoken>@`github.com/lihsuanLin1999/stats507.git`\
+$ git push -u origin main\
 
 
 
