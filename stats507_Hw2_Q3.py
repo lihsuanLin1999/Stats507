@@ -153,14 +153,64 @@ df_subset.to_pickle("tooth.pkl")
 df_all.shape[0]
 
 
-# In[12]:
+# In[ ]:
 
 
-df_subset.shape[0]
+## add gender column
+warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
+
+# load the datasets
+dat_teeth_g = pd.read_sas("OHXDEN_G.XPT")
+dat_teeth_h = pd.read_sas("OHXDEN_H.XPT")
+dat_teeth_i = pd.read_sas("OHXDEN_I.XPT")
+dat_teeth_j = pd.read_sas("OHXDEN_J.XPT")
+
+# create a column to identify to which cohort each case belongs.
+dat_teeth_g['cohort'] = '11-12'
+dat_teeth_h['cohort'] = '13-14'
+dat_teeth_i['cohort'] = '15-16'
+dat_teeth_j['cohort'] = '17-18'
+
+# concatenate 4 dataframes to one dataframe
+frames = [dat_teeth_g, dat_teeth_h,dat_teeth_i,dat_teeth_j]
+pd_teeth_all = pd.concat(frames)
+
+# Use regex to subset columns
+df_subset = pd_teeth_all.filter(regex='(cohort)|(SEQN)|(OHDDESTS)')
+
+# turn off pandas chained assignment
+pd.options.mode.chained_assignment = None
+
+# create a list that contains "CTC" in a column name
+ctc_col = [i for i in df_subset.columns if "CTC" in i]
+
+# create a list that has the categorical datatype columns
+categpry_cols = ['cohort','SEQN'] + ctc_col
+
+# create a list that has the integer datatype
+integer_cols = [i for i in df_subset.columns if i not in categpry_cols]
+
+# fill the missing values to -1
+df_subset = df_subset.fillna(-1)
+
+# use for loops tp convert the data to category type and int32 type
+for col in categpry_cols:
+    df_subset[col] = df_subset[col].astype('category')
+for col in integer_cols:
+    df_subset[col] = df_subset[col].astype('int')
+    
+# rename the column names
+df_subset.rename(columns={'SEQN': 'id'}, inplace=True)
+df_subset.head(1)
 
 
 # In[ ]:
 
 
+# join the two table using same ID
+df_join = df_all.merge(df_subset, on='id', how='left')
+df_join.head(3)
+df_sub = df_join[["id", "age", "gender", "education", "RIDSTATR", "OHDDESTS"]]
+df_sub.head(3)
 
 
