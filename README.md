@@ -16,7 +16,7 @@ $ git branch -m master main\
 $ git add .\
 $ git commit -m "Initial commit. add files"\
 $ git remote add origin `https://github.com/lihsuanLin1999/stats507`\
-$ git remote set-url origin https://<githubtoken>@`github.com/lihsuanLin1999/stats507.git`\
+$ git remote set-url origin `https://`<mytoken>`@github.com/lihsuanLin1999/stats507.git`\
 $ git push -u origin main
   
  
