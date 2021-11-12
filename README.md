@@ -6,9 +6,18 @@
 
 ### Q1:
 
+Extracted code snippet
+
+### Q2:
+
 I first extracted the code snippted of HW2 Q3 and make it into a standalone script file and notebook(ipynb) file and add it to the local repo
 
+
+### Q3:
+
 **Git command**: 
+
+git commit history link: https://github.com/lihsuanLin1999/stats507/commit/abe14bda6d16fb42aba622ecfbe38bf8be6d2a51
 
 $ git init\
 $ git status\
@@ -16,7 +25,7 @@ $ git branch -m master main\
 $ git add .\
 $ git commit -m "Initial commit. add files"\
 $ git remote add origin `https://github.com/lihsuanLin1999/stats507`\
-$ git remote set-url origin `https://`<mytoken>`@github.com/lihsuanLin1999/stats507.git`\
+$ git remote set-url origin `https://mytoken@github.com/lihsuanLin1999/stats507.git`\
 $ git push -u origin main
   
  
